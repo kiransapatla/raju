@@ -1,0 +1,37 @@
+Radhika Aitha :  7322183153
+email id :  radhikaaitha@yahoo.com
+ 1st reference  email id :   sudharani.buttayagari@thermofisher.com 
+ Bharathi : 2nd reference email id :   bharathimanukonda1@gmail.com
+ 
+
+lahariravula@ehi.com-------enter prise holding------- lahari Ravula
+
+Rajeshwar Reddy ----J&J--------SFDC-----------    rgottam@its.jnj.com
+Pradeep Vandanapu--------------SFDC-----------   
+
+last 4 digits of ssn : 0675
+
+657 205 6372
+kiransfdc001@gmail.com
+
+970 Magnolia Ave Apt 3
+Millbrae CA 94030-1928
+
+
+620 Iris Ave Apt 329
+Sunnyvale CA 94086-8547
+
+salef force :
+
+Configuration
+ •Configuration means providing a user defined values which will  enable a given feature or module to function.
+•for example:  Email setting is an example of configuration.
+•salesforce users can configure CRM application.   Marketing User can enable few tabs which are not available for   Customer support people. 
+• Adding a new field to a given salesforce object is configuration.
+• adding a new field which will use formula to perform some result is configuration
+ 
+Customization
+•any feature or functions which are not available as a part of application and the application needs to extend refers to customization.  
+•despite you configured the things there are few actions which are not achievable and it results into adding some custom code, which results in Customization.
+• Adding triggers on the object to perform some action is called customization
+• Adding Apex Code which will generate a vCard from a given Contact is called Customization.
