@@ -1,0 +1,132 @@
+1:- How to execute Apex from Custom button or JavaScript?
+
+·         Ans:-
+
+<apex:page standardController="Custom_Button" extensions="List_Button_Controller">
+    <apex:form >
+        <apex:commandButton value="go Enter" action="{!goEnter}"/>
+    </apex:form>
+</apex:page>
+
+
+public with sharing class ButtonController
+{
+    private ApexPages.StandardController standardController;
+ 
+    public ButtonController(ApexPages.StandardController standardController)
+    {
+        this.standardController = standardController;
+    }
+ 
+    public PageReference goEnter()
+
+    {
+        
+	Id recordId = standardController.getId();
+        PersonalRecord record = (PersonalRecord) standardController.getRecord();
+        return null;
+    }
+}
+
+
+<apex:page standardController="PersonalRecord" extensions="ButtonController"
+           action="{!goEnter}">
+
+
+
+
+2.You can then invoke it via an execute JavaScript custom button
+
+·         Ans:-
+
+Button :
+
+<apex:commandButton value="find" onclick="check();" reRender="abcd" />
+
+
+Script Function :
+
+function check(){
+    var user = document.getElementById('pg:frm:aBC:ip').value;
+    if(user == ''){
+        alert('any inconvenience.');
+        return true;
+    }
+    else
+        inconvenienceFindAF();
+        return true;
+   }
+
+Action Function :
+
+<apex:actionFunction action="{!inconvenienceFind}" name="inconvenienceFindAF" rerender="abcd">
+
+
+
+3) How will you find out if its a sandbox or production from apex?
+
+·         Ans:-
+Mainly based on the URLs we can identify:
+
+if the url is       login.salesforce.com---------------this is PRODUCTION
+
+if the url is       test.salesforce.com----------------this is SAND BOX
+
+
+4) Difference between private and protected keyword in Apex?
+
+·         Ans:-
+Public and Private are keywords, we specify access levels for member variables or member functions also called METHODS
+
+Public ---------  visible to all Classes within the same package and outside package as well
+
+Private --------- These are only visible to the Classes which they Belong (Not vsible to outside of other classes of the same package )
+
+Example for Publlic keyword :
+
+public class BankBalance{
+	public String owner;
+	public int balance; 
+
+	public BankBalance( String name, int dollars )
+	{
+		owner = name;
+
+		if (dollars >= 0)
+			balance = dollars;
+		else
+			dollars =0;
+	}
+}
+
+Example for Public and Private Keywords :
+
+public class BankBalance
+{
+	public String owner;
+	private int balance; 
+
+	public BankBalance( String name, int dollars )
+	{
+		owner = name;
+
+		if (dollars >= 0)
+			balance = dollars;
+		else
+			dollars =0;
+	}
+
+	public int getBalance()
+	{
+		return balance;
+	}
+
+	public void setBalance(int dollars)
+	{
+		if (dollars >= 0)
+			balance = dollars;
+		else
+			dollars = 0;		
+	}
+}
+
